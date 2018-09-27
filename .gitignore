@@ -3,3 +3,7 @@
 .ipynb_checkpoints/
 localconfig
 data/making-a-raster-map/[0123456789]
+data/making-a-raster-map/*.tif
+data/making-a-raster-map/*.html
+
+
