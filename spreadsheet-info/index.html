@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    html * {
+      font-family: calibri
+    }
+    #info{
+      font-weight: normal 
+    }
+  </style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  <div id="res"></div>
+  
+  <div id="instructions">
+    <h1>How to make an Earthtime map:</h1>
+    <p>Link to Google spreadsheet: <a href="">some link</a></p>
+    <h3>Columns</h3>
+    <ol type="A" style="font-weight:bold">
+      <li>Enabled: 
+        <span id="info">TRUE/FALSE to show up on map</span></li>
+      <li>Share link identifier:
+        <span id="info">hopefully unique</span></li>
+      <li>Category: 
+        <span id="info">Category in Data Library browse</span></li>
+      <li>Name
+        <span id="info">Name that shows up in Data Library browse</span></li>
+      <li>Credits</li>
+      <li>Base Layer:
+        <span id="info">Background map</span></li>
+      <li>Custom slider ticks:
+        <span id="info">not working</span></li>
+      <li>Start Date:
+      <li>EndDate:
+      <li>Step:
+        <span id="info">Ticks on slider essentially: hours/days/years/etc.</span></li>
+      <li>URL(<a href="#url-instruct">see below</a>)</li>
+      <li>Scaling:
+        <span id="info"></span></li>
+      <li>Color Scaling:
+        <span id="info"></span></li>
+      <li>Map Type:
+        <span id="info">Bubble, point, chloropletch, etc.</span></li>
+      <li>Color:
+        <span id="info">Default color for all drawn elements(mostly for bubble map)</span></li>
+      <li>External GeoJSON:
+        <span id="info"></span></li>
+      <li>Name Key:
+        <span id="info"></span></li>
+      <li>Show Graph:
+        <span id="info">Can show graph of data with map</span></li>
+      <li>Graph Title</li>
+      <li>Graph Plot Colors</li>
+      <li>Graph Plots</li>
+      <li>Graph Plots First Visible</li>
+      <li>Graph X-Axis Label</li>
+      <li>Graph Y-Axis Label</li>
+      <li>Graph Y-Axis Min</li>
+      <li>Graph X-Axis Label Interval</li>
+      <li>Legend Content:
+        <span id="info">Custom SVG of legend</span></li>
+      <li>Legend Key:
+        <span id="info">Add extra info text to legend</span></li>
+      <li>Load Data Function</li>
+      <li>Set Data Function</li>
+      <li>Number of Levels:
+        <span id="info"></span></li>
+      <li>Number of Attributes:
+        <span id="info">attributes taken in by shader functions</span></li>
+      <li>Vertex Shader</li>
+      <li>Fragment Shader Draw Function</li>
+      <li>Playback Rate:
+        <span id="info">How fast map plays when you first open it</span></li>
+      <li>Master Playback Rate:
+        <span id="info">Scales how fast map plays (how fast 'slow','med','fast' options are)</span></li>
+      <li>Colormap Src:
+        <span id="info">For chloropleths?</span></li>
+      <li>Layer Description:
+        <span id="info">Description of layer for viewer</span></li>
+      <li>Featured Themes</li>
+      <li>Draw Options:
+        <span id="info">used by Gabriel mostly</span></li>  
+    </ol>
+    <a name="url-instruct"></a>
+    <h3>URL (column K)</h3>
+    <ul>
+      <li>Make sure your spreadsheet of data is in a Google Sheets document.</li>
+      <li>While editing that Google Sheets document, go to the share settings and turn link sharing on. Make sure it's set to "Anyone with link can view".</li>
+      <li>Go back to the Google Sheets doc. Copy the link in the search bar and paste it below to generate a new link. This link will work in countries that ban Google products and it will directly download your Google Sheets file as a ".csv"
+        <div id="link-convert">
+          <input type="text" id="link-input" placeholder="paste original link here">
+          <button id="new-link-button" onclick="createGDocLink()">Generate new link</button>
+          <div>New Link:
+            <div id="new-link"></div>
+          </div>
+        </div>
+      </li>
+      <li>Click on new link to check that it downloads a ".csv" file</li>
+      <li>Paste new link into column k (URL)</li>
+    </ul>
+  </div>
+  <script src="./script.js"></script>
+
+</body>
+</html>
