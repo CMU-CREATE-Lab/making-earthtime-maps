@@ -1,13 +1,12 @@
 # process_csv.py
 # using file with dates from 1990 to 2017
-# d[1990-1990] = d[0]
+# data from ourworldindata.org/internet
 
 import csv
 import sys
 
 def process():
     filename = 'number-of-internet-users-by-country'
-    #filename = 'share-of-individuals-using-the-internet'
     input_csv = filename + '.csv'
 
     start_date = 1990
@@ -48,6 +47,7 @@ def process():
                     d.update([(name, ['0'] * (date_range + 1))])
 
         # get rid of gaps in data, use most recent available data
+        # use w caution, can be misleading
         for k in d.keys():
             arr = d[k]
             for i in range(1,len(arr)-1):

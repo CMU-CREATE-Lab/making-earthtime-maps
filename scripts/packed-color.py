@@ -15,6 +15,12 @@ def rgb_to_pack_color(color):
 def hex_to_pack_color(hex_string):
   return rgb_to_pack_color(hex_to_rgb(hex_string))
 
+def unpack_color(f):
+   b = math.floor(f / 256.0 / 256.0)
+   g = math.floor((f - b * 256.0 * 256.0) / 256.0)
+   r = math.floor(f - b * 256.0 * 256.0 - g * 256.0)
+   return [r, g, b]
+
 # convert all colors in hexArr to packed colors
 for i in range(len(hexArr)):
   print(hex_to_pack_color(hexArr[i]))
