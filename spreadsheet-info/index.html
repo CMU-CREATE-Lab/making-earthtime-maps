@@ -17,72 +17,80 @@
 
   <div id="instructions">
     <h1>How to make an Earthtime map:</h1>
-    <p>Link to Google spreadsheet: <a href="">some link</a></p>
     <h3>Columns</h3>
     <ol type="A" style="font-weight:bold">
       <li>Enabled:
-        <span id="info">TRUE/FALSE to show up on map</span></li>
+        <span id="info">TRUE/FALSE to show up in Data Library</span></li>
       <li>Share link identifier:
-        <span id="info">hopefully unique</span></li>
+        <span id="info">A unique id for the layer. Used in share views</span></li>
       <li>Category:
-        <span id="info">Category in Data Library browse</span></li>
-      <li>Name
-        <span id="info">Name that shows up in Data Library browse</span></li>
-      <li>Credits</li>
+        <span id="info">Category in the Data Library that the layer will live under. If one doesn't exist, you can make up a new one</span></li>
+      <li>Name:
+        <span id="info">Name of the layer that shows up under the category.</span></li>
+      <li>Credits:
+         <span id="info">What shows up in the top right corner for the credits - graphs will not have descriptions of what data represent</span></li>
       <li>Base Layer:
-        <span id="info">Background map</span></li>
+        <span id="info">Background map. Default is bdrk (the dark map with labels)</span></li>
       <li>Custom slider ticks:
         <span id="info">not working</span></li>
       <li>Start Date:
       <li>EndDate:
       <li>Step:
-        <span id="info">Ticks on slider essentially: hours/days/years/etc.</span></li>
-      <li>URL(<a href="#url-instruct">see below</a>)</li>
+        <span id="info">Ticks on slider essentially: hours/days/years/etc. (ex if you data goes from 2000-2005 and you want yearly ticks, then step = 5)</span></li>
+      <li>URL (<a href="#url-instruct">see below</a>)</li>
       <li>Scaling:
         <span id="info"></span></li>
       <li>Color Scaling:
         <span id="info"></span></li>
       <li>Map Type:
-        <span id="info">Bubble, point, chloropletch, etc.</span></li>
+        <span id="info">bubble, bivalent bubble, choropleth, point, etc.</span></li>
       <li>Color:
-        <span id="info">Default color for all drawn elements(mostly for bubble map)</span></li>
+        <span id="info">Default color for all drawn elements (mostly for bubble map)</span></li>
       <li>External GeoJSON:
         <span id="info"></span></li>
       <li>Name Key:
         <span id="info"></span></li>
       <li>Show Graph:
-        <span id="info">Can show graph of data with map</span></li>
-      <li>Graph Title</li>
-      <li>Graph Plot Colors</li>
-      <li>Graph Plots</li>
-      <li>Graph Plots First Visible</li>
-      <li>Graph X-Axis Label</li>
-      <li>Graph Y-Axis Label</li>
-      <li>Graph Y-Axis Min</li>
-      <li>Graph X-Axis Label Interval</li>
+        <span id="info">TRUE/FALSE; Can show graph of data with map</span></li>
+      <li>Graph Title:</li>
+      <li>Graph Plot Colors:
+        <span id="info">You can specify your own colors - HTML hex format - e.g. ["#ff0000"] - or leave blank to use automatically set colors.</span></li>
+      <li>Graph Plots First Visible:
+       <span id="info">If you have multiple things to plot - which one shows up first — default will be the first one. Starts from 0. e.g. [0,4] -- shows the first and 3rd on by default</span></li>
+      <li>Graph X-Axis Label:</li>
+      <li>Graph Y-Axis Label:</li>
+      <li>Graph Y-Axis Min:
+        <span id="info">If you want to bound the data; generally just leave it blank and it will be automatically bounded.</span></li>
+      <li>Graph Y-Axis Max:
+        <span id="info">If you want to bound the data; generally just leave it blank and it will be automatically bounded.</span></li>
+      <li>Graph X-Axis Label Interval:
+        <span id="info">If you have a lot of data points, you will want to set an interval here. e.g. 5 to show a tick every 5 years.</span></li>
       <li>Legend Content:
         <span id="info">Custom SVG of legend</span></li>
       <li>Legend Key:
         <span id="info">Add extra info text to legend</span></li>
-      <li>Load Data Function</li>
-      <li>Set Data Function</li>
+      <li>Load Data Function:</li>
+      <li>Set Data Function:</li>
       <li>Number of Levels:
         <span id="info"></span></li>
       <li>Number of Attributes:
         <span id="info">attributes taken in by shader functions</span></li>
       <li>Vertex Shader</li>
-      <li>Fragment Shader Draw Function</li>
+      <li>Fragment Shader</li>
+      <li>Draw Function:</li>
       <li>Playback Rate:
         <span id="info">How fast map plays when you first open it</span></li>
       <li>Master Playback Rate:
         <span id="info">Scales how fast map plays (how fast 'slow','med','fast' options are)</span></li>
       <li>Colormap Src:
-        <span id="info">For chloropleths?</span></li>
+        <span id="info">Use a png file to determine the colors of choropleth polygons/bubbles</span></li>
       <li>Layer Description:
         <span id="info">Description of layer for viewer</span></li>
       <li>Featured Themes</li>
-      <li>Draw Options:
-        <span id="info">used by Gabriel mostly</span></li>
+      <li>Draw Options</li>
+      <li>Set Data Options</li>
+      <li>Extras Options
+        <span id="info">Hash of options passed in for the Extras content (vidoes/images). Options include: {"muted": false|true, "loop": true|false, "object-fit": "contain|cover"}</span></li></li>
     </ol>
     <a name="url-instruct"></a>
     <h3>URL (column K)</h3>
