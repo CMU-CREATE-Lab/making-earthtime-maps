@@ -17,6 +17,18 @@ function rgbToHex(r, g, b) {
   return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 
+function hexToRgbNormalized(hex) {
+  var inputHex = document.getElementById("hex2-input").value || hex;
+  var c = hexToRgb(inputHex);
+  var cNormalized = "[" + parseFloat(c.r / 255).toFixed(1) + ", " + parseFloat(c.g / 255).toFixed(1) + ", " + parseFloat(c.b / 255).toFixed(1) + ", 1]";
+  var normalizedColorDomField = document.getElementById("normalizedColor");
+  if (normalizedColorDomField) {
+    normalizedColorDomField.innerHTML = cNormalized;
+  } else {
+    return cNormalized;
+  }
+}
+
 function hexToPackedColor(hex) {
   var inputHex = document.getElementById("hex-input").value || hex;
   var c = hexToRgb(inputHex);
