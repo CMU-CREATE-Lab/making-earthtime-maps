@@ -107,8 +107,20 @@
       <li>Click on new link to check that it downloads a ".csv" file</li>
       <li>Paste new link into column k (URL)</li>
     </ul>
+    <h3>Color (column O)</h3>
+    <ul>
+      <li>
+        <div id="hex-to-normalized-color">
+         <input type="text" id="hex2-input" placeholder="paste hex color here">
+         <button id="hex-to-normalized-color-button" onclick="hexToRgbNormalized()">Hex to color (normalized)</button>
+         <div>Color: <span id="normalizedColor"></span></div>
+        </div>
+      </li>
+      <li>Paste new color into column O (Color)</li>
+    </ul>
   </div>
   <script src="./script.js"></script>
+  <script src="./../scripts/script.js"></script>
 
 </body>
 </html>
