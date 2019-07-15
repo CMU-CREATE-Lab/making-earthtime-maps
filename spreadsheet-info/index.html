@@ -2,10 +2,10 @@
 <html>
   <style>
     html * {
-      font-family: calibri
+      font-family: calibri;
     }
     #info{
-      font-weight: normal 
+      font-weight: normal;
     }
   </style>
 <head>
@@ -14,17 +14,17 @@
 </head>
 <body>
   <div id="res"></div>
-  
+
   <div id="instructions">
     <h1>How to make an Earthtime map:</h1>
     <p>Link to Google spreadsheet: <a href="">some link</a></p>
     <h3>Columns</h3>
     <ol type="A" style="font-weight:bold">
-      <li>Enabled: 
+      <li>Enabled:
         <span id="info">TRUE/FALSE to show up on map</span></li>
       <li>Share link identifier:
         <span id="info">hopefully unique</span></li>
-      <li>Category: 
+      <li>Category:
         <span id="info">Category in Data Library browse</span></li>
       <li>Name
         <span id="info">Name that shows up in Data Library browse</span></li>
@@ -82,7 +82,7 @@
         <span id="info">Description of layer for viewer</span></li>
       <li>Featured Themes</li>
       <li>Draw Options:
-        <span id="info">used by Gabriel mostly</span></li>  
+        <span id="info">used by Gabriel mostly</span></li>
     </ol>
     <a name="url-instruct"></a>
     <h3>URL (column K)</h3>
@@ -93,9 +93,7 @@
         <div id="link-convert">
           <input type="text" id="link-input" placeholder="paste original link here">
           <button id="new-link-button" onclick="createGDocLink()">Generate new link</button>
-          <div>New Link:
-            <div id="new-link"></div>
-          </div>
+          <div>New Link: <span id="new-link"></span></div>
         </div>
       </li>
       <li>Click on new link to check that it downloads a ".csv" file</li>

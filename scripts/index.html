@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    html * {
+      font-family: calibri;
+    }
+    #info{
+      font-weight: normal;
+    }
+  </style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+</head>
+<body>
+  <div id="instructions">
+    <h1>Various Utility Scripts:</h1>
+    <h3>Hex To Packed Color</h3>
+    <div id="hex-to-packedColor">
+      <input type="text" id="hex-input" placeholder="paste hex color here">
+      <button id="hex-to-packedColor-button" onclick="hexToPackedColor()">Hex to packedColor</button>
+      <div>packedColor: <span id="packedColor"></span></div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
