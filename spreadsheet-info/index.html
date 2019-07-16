@@ -2,10 +2,21 @@
 <html>
   <style>
     html * {
+<<<<<<< Updated upstream
       font-family: calibri;
+=======
+      font-family: Courier
+>>>>>>> Stashed changes
     }
     #info{
       font-weight: normal;
+    }
+    #instructions{
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+    p{
+      font-style: italic;
     }
   </style>
 <head>
@@ -19,6 +30,7 @@
     <h1>How to make an Earthtime map:</h1>
     <h3>Columns</h3>
     <ol type="A" style="font-weight:bold">
+<<<<<<< Updated upstream
       <li>Enabled:
         <span id="info">TRUE/FALSE to show up in Data Library</span></li>
       <li>Share link identifier:
@@ -29,6 +41,21 @@
         <span id="info">Name of the layer that shows up under the category.</span></li>
       <li>Credits:
          <span id="info">What shows up in the top right corner for the credits - graphs will not have descriptions of what data represent</span></li>
+=======
+      
+      <p>Main Info</p>
+      <li>Enabled: 
+        <span id="info">TRUE/FALSE to show up on map</span></li>
+      <li>Share link identifier:
+        <span id="info">hopefully unique</span></li>
+      <li>Category: 
+        <span id="info">Category in Data Library browse</span></li>
+      <li>Name
+        <span id="info">Name that shows up in Data Library browse</span></li>
+      
+      <p>Main Settings</p>
+      <li>Credits</li>
+>>>>>>> Stashed changes
       <li>Base Layer:
         <span id="info">Background map. Default is bdrk (the dark map with labels)</span></li>
       <li>Custom slider ticks:
@@ -43,14 +70,21 @@
       <li>Color Scaling:
         <span id="info"></span></li>
       <li>Map Type:
+<<<<<<< Updated upstream
         <span id="info">bubble, bivalent bubble, choropleth, point, etc.</span></li>
+=======
+        <span id="info">Bubble, point, chloropletch, etc. Default is bubble map.</span></li>
+>>>>>>> Stashed changes
       <li>Color:
         <span id="info">Default color for all drawn elements (mostly for bubble map)</span></li>
       <li>External GeoJSON:
         <span id="info"></span></li>
       <li>Name Key:
         <span id="info"></span></li>
+      
+      <p>Graphs</p>
       <li>Show Graph:
+<<<<<<< Updated upstream
         <span id="info">TRUE/FALSE; Can show graph of data with map</span></li>
       <li>Graph Title:</li>
       <li>Graph Plot Colors:
@@ -65,19 +99,51 @@
         <span id="info">If you want to bound the data; generally just leave it blank and it will be automatically bounded.</span></li>
       <li>Graph X-Axis Label Interval:
         <span id="info">If you have a lot of data points, you will want to set an interval here. e.g. 5 to show a tick every 5 years.</span></li>
+=======
+        <span id="info">Can show graph of data with map</span></li>
+      <li>Graph Title</li>
+      <li>Graph Plot Colors</li>
+      <li>Graph Plots</li>
+      <li>Graph Plots First Visible</li>
+      <li>Graph X-Axis Label</li>
+      <li>Graph Y-Axis Label</li>
+      <li>Graph Y-Axis Min</li>
+      <li>Graph X-Axis Label Interval</li>
+      
+      <p>Legend</p>
+>>>>>>> Stashed changes
       <li>Legend Content:
         <span id="info">Custom SVG of legend</span></li>
       <li>Legend Key:
         <span id="info">Add extra info text to legend</span></li>
+<<<<<<< Updated upstream
       <li>Load Data Function:</li>
       <li>Set Data Function:</li>
+=======
+      
+      <p>Function Options</p>
+      <li>Load Data Function.
+        <span id="info">Default: loadData(?)</span></li>
+      <li>Set Data Function
+        <span id="info">Default: setBufferData(?)</span></li>
+>>>>>>> Stashed changes
       <li>Number of Levels:
         <span id="info"></span></li>
       <li>Number of Attributes:
         <span id="info">attributes taken in by shader functions</span></li>
+<<<<<<< Updated upstream
       <li>Vertex Shader</li>
       <li>Fragment Shader</li>
       <li>Draw Function:</li>
+=======
+      <li>Vertex Shader
+        <span id="info">Default: </span></li>
+      <li>Fragment Shader
+        <span id="info">Default: </span></li>
+      
+      <p>Other Settings</p>
+      <li>Draw Function</li>
+>>>>>>> Stashed changes
       <li>Playback Rate:
         <span id="info">How fast map plays when you first open it</span></li>
       <li>Master Playback Rate:
@@ -87,10 +153,19 @@
       <li>Layer Description:
         <span id="info">Description of layer for viewer</span></li>
       <li>Featured Themes</li>
+<<<<<<< Updated upstream
       <li>Draw Options</li>
       <li>Set Data Options</li>
       <li>Extras Options
         <span id="info">Hash of options passed in for the Extras content (vidoes/images). Options include: {"muted": false|true, "loop": true|false, "object-fit": "contain|cover"}</span></li></li>
+=======
+      
+      <p>More Function Options</p>
+      <li>Draw Options:
+        <span id="info">dictionary of options passed to the draw function(see Draw Function(AI))</span></li>  
+      <li>Set Data Options:
+        <span id="info">dictionary of options passed to the set data function(see Set Data Function(AD))</span></li>  
+>>>>>>> Stashed changes
     </ol>
     <a name="url-instruct"></a>
     <h3>URL (column K)</h3>
