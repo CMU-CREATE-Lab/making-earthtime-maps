@@ -1,0 +1,7 @@
+These are some links to p5.js sketches generate svg legends more easily
+
+circles
+https://editor.p5js.org/lzmunch/sketches/KKLPXR3w3
+
+triangles
+https://editor.p5js.org/lzmunch/sketches/tOwlyvwip
