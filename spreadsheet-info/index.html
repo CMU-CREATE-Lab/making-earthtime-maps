@@ -158,40 +158,38 @@
 
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var pickrContainer = document.querySelector('.pickr-container');
-      var config = {
-        theme: "nano",
-        default: "#0000ff",
-        inline: true,
-        useAsButton: true,
-        defaultRepresentation: 'HEX',
-        components: {
-          preview: true,
-          opacity: false,
-          hue: true,
-          lockOpacity: false,
-          interaction: {
-            hex: false,
-            rgba: false,
-            hsva: false,
-            input: true,
-            clear: false,
-            save: false,
-            button: false
-          }
-        }
-      }
-      var pickrInstance = new Pickr(Object.assign({
-        el: pickrContainer,
-      }, config));
-    });
-  </script>
-
   <script src="./script.js"></script>
   <script src="./../scripts/script.js"></script>
   <script src="./pickr.es5.min.js"></script>
+
+  <script>
+    var pickrContainer = document.querySelector('.pickr-container');
+    var config = {
+      theme: "nano",
+      default: "#0000ff",
+      inline: true,
+      useAsButton: true,
+      defaultRepresentation: 'HEX',
+      components: {
+        preview: true,
+        opacity: false,
+        hue: true,
+        lockOpacity: false,
+        interaction: {
+          hex: false,
+          rgba: false,
+          hsva: false,
+          input: true,
+          clear: false,
+          save: false,
+          button: false
+        }
+      }
+    }
+    var pickrInstance = new Pickr(Object.assign({
+      el: pickrContainer,
+    }, config));
+  </script>
 
 </body>
 </html>
