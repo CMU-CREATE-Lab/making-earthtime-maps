@@ -18,6 +18,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <link href="https://simonwep.github.io/pickr/dist/themes/nano.min.css" rel="stylesheet"/>
 </head>
 <body>
   <div id="res"></div>
@@ -53,7 +54,7 @@
       <li>Map Type:
         <span id="info">bubble, bivalent bubble, choropleth, point, etc.</span></li>
       <li>Color:
-        <span id="info">Default color for all drawn elements (mostly for bubble map)</span></li>
+        <span id="info">Default color for all drawn elements (mostly for bubble maps; </span><a href="#hex-to-normalized-color">see below</a>)</li>
       <li>External GeoJSON:
         <span id="info"></span></li>
       <li>Name Key:
@@ -115,10 +116,13 @@
         </div>
       </li>
       <li>Click on new link to check that it downloads a ".csv" file</li>
-      <li>Paste new link into column k (URL)</li>
+      <li>Paste new link into column K (URL)</li>
     </ul>
+
     <h3>Color (column O)</h3>
     <ul>
+      <li>Use the color picker below to choose a color</li>
+      <li>Take the value it gives you and paste it below</li>
       <li>
         <div id="hex-to-normalized-color">
          <input type="text" id="hex2-input" placeholder="paste hex color here">
@@ -128,9 +132,63 @@
       </li>
       <li>Paste new color into column O (Color)</li>
     </ul>
+
+    <h3>Hex To Packed Color (for 'packedColor' column in CSV data spreadsheet)</h3>
+    <ul>
+      <li>Use the color picker below to choose a color</li>
+      <li>Take the value it gives you and paste it below</li>
+      <li>
+        <div id="hex-to-packedColor">
+          <input type="text" id="hex-input" placeholder="paste hex color here">
+          <button id="hex-to-packedColor-button" onclick="hexToPackedColor()">Hex to packedColor</button>
+          <div>packedColor: <span id="packedColor"></span></div>
+        </div>
+      </li>
+    </ul>
+
+    <h3>Color Picker</h3>
+    <div>
+      <div class="pickr-container"></div>
+    </div>
+
+    <br>
+
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var pickrContainer = document.querySelector('.pickr-container');
+      var config = {
+        theme: "nano",
+        default: "#0000ff",
+        inline: true,
+        useAsButton: true,
+        defaultRepresentation: 'HEX',
+        components: {
+          preview: true,
+          opacity: false,
+          hue: true,
+          lockOpacity: false,
+          interaction: {
+            hex: false,
+            rgba: false,
+            hsva: false,
+            input: true,
+            clear: false,
+            save: false,
+            button: false
+          }
+        }
+      }
+      var pickrInstance = new Pickr(Object.assign({
+        el: pickrContainer,
+      }, config));
+    });
+  </script>
+
   <script src="./script.js"></script>
   <script src="./../scripts/script.js"></script>
+  <script src="https://simonwep.github.io/pickr/dist/pickr.es5.min.js"></script>
 
 </body>
 </html>
