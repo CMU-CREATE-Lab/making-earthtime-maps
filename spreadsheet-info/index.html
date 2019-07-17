@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./pickr-nano.min.css">
   <style>
     html * {
       font-family: calibri;
@@ -11,14 +15,13 @@
       padding-right: 40px;
       padding-left: 40px;
     }
-    p{
+    p {
       font-style: italic;
     }
+    .show-bold {
+      font-weight: bold;
+    }
   </style>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link href="./pickr-nano.min.css" rel="stylesheet"/>
 </head>
 <body>
   <div id="res"></div>
@@ -127,7 +130,7 @@
         <div id="hex-to-normalized-color">
          <input type="text" id="hex2-input" placeholder="paste hex color here">
          <button id="hex-to-normalized-color-button" onclick="hexToRgbNormalized()">Hex to color (normalized)</button>
-         <div>Color: <span id="normalizedColor"></span></div>
+         <div>Color: <span id="normalizedColor" class="show-bold"></span></div>
         </div>
       </li>
       <li>Paste new color into column O (Color)</li>
@@ -141,7 +144,7 @@
         <div id="hex-to-packedColor">
           <input type="text" id="hex-input" placeholder="paste hex color here">
           <button id="hex-to-packedColor-button" onclick="hexToPackedColor()">Hex to packedColor</button>
-          <div>packedColor: <span id="packedColor"></span></div>
+          <div>packedColor: <span id="packedColor" class="show-bold"></span></div>
         </div>
       </li>
     </ul>
