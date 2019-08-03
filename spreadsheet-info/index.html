@@ -106,20 +106,23 @@
       <li>Extras Options:
         <span id="info">Hash of options passed in for the Extras content (vidoes/images). Options include: {"muted": false|true, "loop": true|false, "object-fit": "contain|cover"}</span></li></li>
     </ol>
+
+    <h1>Tools</h1>
+
     <a name="url-instruct"></a>
     <h3>URL (column K)</h3>
     <ul>
       <li>Make sure your spreadsheet of data is in a Google Sheets document.</li>
-      <li>While editing that Google Sheets document, go to the share settings and turn link sharing on. Make sure it's set to "Anyone with link can view".</li>
-      <li>Go back to the Google Sheets doc. Copy the link in the search bar and paste it below to generate a new link. This link will work in countries that ban Google products and it will directly download your Google Sheets file as a ".csv"
+      <li>While editing that data spreadsheet, go to the share settings and turn link sharing on. Make sure it's set to "Anyone with link can view". Click done to close the pop-up.</li>
+      <li>While still in the same sheet, copy the link in the search bar at the top of your browser and paste it below to generate a new link. This link will work in countries that ban Google products and it will directly download your Google Sheets file as a ".csv"
         <div id="link-convert">
           <input type="text" id="link-input" placeholder="paste original link here">
           <button id="new-link-button" onclick="createGDocLink()">Generate new link</button>
           <div>New Link: <span id="new-link"></span></div>
         </div>
       </li>
-      <li>Click on new link to check that it downloads a ".csv" file</li>
-      <li>Paste new link into column K (URL)</li>
+      <li>Click on the new link above to check that it downloads a ".csv" file. No need to save it locally, we just want to make sure it attempts to download a file.</li>
+      <li>Paste the new link into column K (URL) of your EarthTime layers Google Sheet</li>
     </ul>
 
     <h3>Color (column O)</h3>
@@ -133,7 +136,7 @@
          <div>Color: <span id="normalizedColor" class="show-bold"></span></div>
         </div>
       </li>
-      <li>Paste new color into column O (Color)</li>
+      <li>Paste new color into column O (Color) of your EarthTime layers Google Sheet</li>
     </ul>
 
     <h3>Hex To Packed Color (for 'packedColor' column in CSV data spreadsheet)</h3>
