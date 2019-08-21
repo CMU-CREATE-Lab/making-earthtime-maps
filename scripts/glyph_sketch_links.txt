@@ -5,3 +5,6 @@ https://editor.p5js.org/lzmunch/sketches/KKLPXR3w3
 
 triangles
 https://editor.p5js.org/lzmunch/sketches/tOwlyvwip
+
+wind direction arrows
+https://editor.p5js.org/lzmunch/sketches/W2MwX48CF
