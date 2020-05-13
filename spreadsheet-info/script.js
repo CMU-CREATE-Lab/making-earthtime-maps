@@ -19,7 +19,6 @@ function trajectories(){
 
 function createGDocLink(){
   try{
-    console.log('clicked');
     var link = document.getElementById("link-input").value;
 
     if (link.length == 0 || link == undefined){
@@ -40,7 +39,3 @@ function createGDocLink(){
     alert("error occured while creating link");
   }
 }
-
-//trajectories();
-//var link = "https://docs.google.com/spreadsheets/d/1llOVIDSQkdfLIjZlFFY-23m0ldvUTEWQMmNcswLV7o4/edit#gid=1419101585"
-//createGDocLink();

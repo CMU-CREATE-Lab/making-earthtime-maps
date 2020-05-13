@@ -20,7 +20,7 @@ function rgbToHex(r, g, b) {
 function hexToRgbNormalized(hex) {
   var inputHex = document.getElementById("hex2-input").value || hex;
   var c = hexToRgb(inputHex);
-  var cNormalized = "[" + parseFloat(c.r / 255).toFixed(1) + ", " + parseFloat(c.g / 255).toFixed(1) + ", " + parseFloat(c.b / 255).toFixed(1) + ", 1]";
+  var cNormalized = "[" + parseFloat(c.r / 255.0).toFixed(4) + ", " + parseFloat(c.g / 255.0).toFixed(4) + ", " + parseFloat(c.b / 255.0).toFixed(4) + ", 1]";
   var normalizedColorDomField = document.getElementById("normalizedColor");
   if (normalizedColorDomField) {
     normalizedColorDomField.innerHTML = cNormalized;
