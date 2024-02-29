@@ -1,0 +1,19 @@
+## Overview
+## Parses and converts a .xml to a .csv file.
+
+# Loads required libraries
+library(XML)
+library(plyr)
+
+# Parses file from downloads
+xml = xmlParse("/Users/gwenli/Downloads/UNdata_Export_20240229_001154799.xml")
+
+# Converts .xml to a list type
+list = xmlToList(xml)
+
+# Converts list type to a data frame type
+# Retrieves the data
+data = ldply(list, data.frame)
+
+# Converts data to .csv
+write.csv(data, "UN_greenhouse_data.csv", row.names = FALSE)
